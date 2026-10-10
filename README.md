@@ -54,6 +54,23 @@ The final goal is to understand how different CNN architectures and training str
 
 ---
 
+# 🎥 Project Demo Video
+
+<div align="center">
+
+## 🎬 Watch Complete Project Demonstration
+
+[![Watch Demo](https://img.shields.io/badge/▶_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUR_VIDEO_LINK)
+
+<br>
+
+**CNN • CIFAR-10 • Augmentation • MobileNetV2 • Fine-Tuning**
+
+</div>
+
+
+---
+
 # 🏆 Final Result
 
 <div align="center">
@@ -1275,23 +1292,6 @@ The CIFAR-10 dataset is automatically downloaded through TensorFlow/Keras.
 
 ---
 
-# 🎥 Project Demo Video
-
-<div align="center">
-
-## 🎬 Watch Complete Project Demonstration
-
-[![Watch Demo](https://img.shields.io/badge/▶_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUR_VIDEO_LINK)
-
-<br>
-
-**CNN • CIFAR-10 • Augmentation • MobileNetV2 • Fine-Tuning**
-
-</div>
-
-> 🔗 Replace `YOUR_VIDEO_LINK` with your actual project demonstration video URL.
-
----
 
 # 📸 Project Visualizations
 
