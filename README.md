@@ -2,9 +2,9 @@
 
 # 🧠 CIFAR-10 Image Classification using Deep Learning
 
-### CNN from Scratch • Data Augmentation • Transfer Learning • Fine-Tuning
+### CNN from Scratch • Data Augmentation • Transfer Learning • Fine-Tuning • Residual Connections
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=850&lines=Deep+Learning+PR4+%7C+Project+A;CNN+from+Scratch+on+CIFAR-10;Data+Augmentation+%2B+Transfer+Learning;MobileNetV2+Feature+Extraction+%26+Fine-Tuning;Best+Test+Accuracy%3A+83.73%25" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=25&pause=1000&color=36BCF7&center=true&vCenter=true&width=900&lines=Deep+Learning+PR4+%7C+Project+A;CNN+from+Scratch+%E2%80%94+CIFAR-10+Classifier;Data+Augmentation+%2B+Transfer+Learning;MobileNetV2+Feature+Extraction+%26+Fine-Tuning;Best+Test+Accuracy+%3D+84.61%25+%F0%9F%8F%86" alt="Typing SVG" />
 
 <br>
 
@@ -12,12 +12,17 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-Deep_Learning-D00000?style=for-the-badge&logo=keras&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![CIFAR10](https://img.shields.io/badge/Dataset-CIFAR--10-20BEFF?style=for-the-badge)
+
+<br>
+
+![Dataset](https://img.shields.io/badge/Dataset-CIFAR--10-blueviolet?style=for-the-badge)
+![Models](https://img.shields.io/badge/Models_Compared-6-success?style=for-the-badge)
+![Best Accuracy](https://img.shields.io/badge/Best_Accuracy-84.61%25-brightgreen?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Project-Completed-success?style=for-the-badge)
 
 <br>
 
-> **A complete deep-learning image-classification project progressing from fundamental CNN operations to data augmentation, transfer learning, fine-tuning, and residual connections.**
+> ### 🚀 A complete Deep Learning journey from basic convolution operations to CNNs, data augmentation, MobileNetV2 transfer learning, fine-tuning and residual connections.
 
 </div>
 
@@ -25,30 +30,27 @@
 
 # 📌 Project Overview
 
-This project implements a complete **image classification pipeline on the CIFAR-10 dataset** using **TensorFlow and Keras**.
+This project implements a complete **CIFAR-10 image classification pipeline** using **TensorFlow and Keras**.
 
-The project begins with the fundamentals of Convolutional Neural Networks and gradually progresses toward more advanced deep-learning techniques.
+The project begins with the fundamental concepts behind **Convolutional Neural Networks (CNNs)** and gradually progresses toward advanced deep-learning techniques including:
 
-The implementation covers:
-
-- 📊 CIFAR-10 exploration and preprocessing
-- 🧠 CNN vs ANN concepts
 - 🔍 Manual convolution
 - 🖼️ Padding and strides
 - 🗺️ Feature-map visualization
 - 📉 MaxPooling and AveragePooling
-- 🏛️ LeNet-5 architecture
-- 🚀 Custom CNN from scratch
-- 🔄 Backpropagation concepts
-- 📈 CNN training and evaluation
-- 🎨 Data augmentation
+- 🏛️ LeNet-5
+- 🧠 Custom CNN from scratch
+- 🔄 CNN backpropagation concepts
+- ⏹️ Early stopping
+- 📉 Learning-rate reduction
+- 🎨 Image augmentation
 - 🧩 Keras augmentation layers
-- ⚡ MobileNetV2 transfer learning
-- 🔓 Fine-tuning
-- 🔗 Residual / skip connections
+- ⚡ MobileNetV2 feature extraction
+- 🔓 MobileNetV2 fine-tuning
+- 🔗 Residual connections
 - 📊 Six-model performance comparison
 
-The primary objective is not only to obtain high classification accuracy but also to understand **how CNN architectures evolve from basic convolution operations to modern transfer-learning approaches**.
+The final goal is to understand how different CNN architectures and training strategies affect image-classification performance.
 
 ---
 
@@ -58,21 +60,25 @@ The primary objective is not only to obtain high classification accuracy but als
 
 ## 🥇 Best Performing Model
 
-### CNN Scratch + ImageDataGenerator
+# CNN Scratch + ImageDataGenerator
 
-| Metric | Result |
-|:---:|:---:|
-| 🏆 **Test Accuracy** | **83.73%** |
-| 🧠 Architecture | Custom CNN |
-| 🎨 Augmentation | ImageDataGenerator |
-| 🔢 Parameters | 175,018 |
-| 🔄 Transfer Learning | No |
+| 📊 Metric | 🏆 Result |
+|:---|:---:|
+| **Test Accuracy** | **84.61%** |
+| Architecture | Custom CNN |
+| Augmentation | ImageDataGenerator |
+| Transfer Learning | No |
+| Parameters | 175,018 |
 
-### ⭐ **83.73% Test Accuracy**
+<br>
+
+# 🎯 84.61% Test Accuracy
+
+![Best Accuracy](https://img.shields.io/badge/FINAL_TEST_ACCURACY-84.61%25-brightgreen?style=for-the-badge)
 
 </div>
 
-The custom CNN trained with **ImageDataGenerator augmentation** achieved the highest test accuracy among all six evaluated approaches.
+The **Custom CNN trained with ImageDataGenerator augmentation** achieved the highest test accuracy among all six evaluated approaches.
 
 ---
 
@@ -86,199 +92,273 @@ from tensorflow.keras.datasets import cifar10
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
 ```
 
-### Dataset Information
+## 📊 Dataset Information
 
 | Property | Value |
 |---|---:|
-| Total Images | 60,000 |
-| Training Images | 50,000 |
-| Test Images | 10,000 |
-| Image Resolution | 32 × 32 |
-| Channels | 3 — RGB |
-| Number of Classes | 10 |
-| Original Pixel Range | 0–255 |
-| Normalized Range | 0–1 |
+| 🖼️ Total Images | 60,000 |
+| 🏋️ Training Images | 50,000 |
+| 🧪 Test Images | 10,000 |
+| 📐 Image Resolution | 32 × 32 |
+| 🎨 Channels | 3 — RGB |
+| 🏷️ Classes | 10 |
+| 🔢 Original Pixel Range | 0–255 |
+| ⚙️ Normalized Range | 0–1 |
 
 ---
 
 # 🏷️ CIFAR-10 Classes
 
-The dataset contains the following ten classes:
-
 ```text
-0 → Airplane
-1 → Automobile
-2 → Bird
-3 → Cat
-4 → Deer
-5 → Dog
-6 → Frog
-7 → Horse
-8 → Ship
-9 → Truck
+0 → ✈️  Airplane
+1 → 🚗 Automobile
+2 → 🐦 Bird
+3 → 🐱 Cat
+4 → 🦌 Deer
+5 → 🐶 Dog
+6 → 🐸 Frog
+7 → 🐴 Horse
+8 → 🚢 Ship
+9 → 🚚 Truck
 ```
 
-CIFAR-10 is challenging because every image has a resolution of only **32 × 32 pixels**.
+CIFAR-10 contains small **32 × 32 RGB images**, making classification challenging.
 
-Visually related classes such as:
+Some classes are visually similar:
 
 ```text
-Cat        ↔ Dog
-Automobile ↔ Truck
+🐱 Cat         ↔ 🐶 Dog
+
+🚗 Automobile  ↔ 🚚 Truck
 ```
 
-can therefore be difficult for a classifier to distinguish.
+These similarities can produce classification errors, especially when the image contains a complex background or low-detail object.
 
 ---
 
-# 🧭 Complete Project Workflow
+# 🗂️ Repository Structure
 
 ```text
-                 CIFAR-10 Dataset
-                        │
-                        ▼
-              Data Exploration
-                        │
-                        ▼
-                Preprocessing
-                        │
-              ┌─────────┴─────────┐
-              ▼                   ▼
-         Normalize           One-Hot Encode
-              │                   │
-              └─────────┬─────────┘
-                        ▼
-              CNN Fundamentals
-                        │
-         ┌──────────────┼──────────────┐
-         ▼              ▼              ▼
-    Convolution      Padding        Strides
-         │
-         ▼
-    Feature Maps
-         │
-         ▼
-       Pooling
-         │
-         ▼
-       LeNet-5
-         │
-         ▼
-     Custom CNN
-         │
-         ▼
-       Training
-         │
-         ▼
-      Evaluation
-         │
-    ┌────┴─────────────┐
-    ▼                  ▼
-Augmentation     Transfer Learning
-    │                  │
-    ▼                  ▼
-ImageDataGen      MobileNetV2
-    │                  │
-    ▼             Feature Extraction
-Keras Layers           │
-                       ▼
-                   Fine-Tuning
-                       │
-                       ▼
-                Model Comparison
-                       │
-                       ▼
-                 Final Results
+DL_PR4A_CIFAR10/
+│
+├── 📓 DL_PR4A.ipynb
+├── 🌐 DL_PR4A.html
+├── 📖 README.md
+├── 📦 requirements.txt
+│
+├── 🧠 models/
+│   └── cifar10_model.h5
+│
+└── 📊 plots/
+    │
+    ├── cifar10_samples_grid.png
+    ├── pixel_histogram_before_normalization.png
+    ├── pixel_histogram_after_normalization.png
+    ├── manual_convolution_edge_detection.png
+    ├── feature_map_original_image.png
+    ├── feature_maps.png
+    ├── feature_maps_before_pooling.png
+    ├── maxpooling_feature_maps.png
+    ├── averagepooling_feature_maps.png
+    ├── training_curves.png
+    ├── confusion_matrix.png
+    ├── misclassified_images.png
+    ├── original_image_before_augmentation.png
+    ├── augmentation_grid.png
+    ├── augmentation_validation_comparison.png
+    ├── augmentation_accuracy_comparison.png
+    ├── keras_augmentation_grid.png
+    ├── transfer_learning_curves.png
+    └── results_table.png
 ```
 
 ---
 
-# 1️⃣ Data Loading, EDA & Preprocessing
+# 🔄 Complete Project Workflow
 
-The first stage focuses on understanding and preparing CIFAR-10.
+```text
+                        CIFAR-10
+                           │
+                           ▼
+                  Data Exploration
+                           │
+                           ▼
+                     Preprocessing
+                           │
+              ┌────────────┴────────────┐
+              ▼                         ▼
+         Normalization            One-Hot Encoding
+              │                         │
+              └────────────┬────────────┘
+                           ▼
+                    CNN Fundamentals
+                           │
+           ┌───────────────┼───────────────┐
+           ▼               ▼               ▼
+      Convolution       Padding          Strides
+           │
+           ▼
+      Feature Maps
+           │
+           ▼
+        Pooling
+           │
+      ┌────┴─────┐
+      ▼          ▼
+ MaxPooling  AveragePooling
+      │
+      └────┬─────┘
+           ▼
+        LeNet-5
+           │
+           ▼
+      Custom CNN
+           │
+           ▼
+        Training
+           │
+           ▼
+       Evaluation
+           │
+     ┌─────┴────────────────┐
+     ▼                      ▼
+Data Augmentation      Transfer Learning
+     │                      │
+ ┌───┴────┐                 ▼
+ ▼        ▼             MobileNetV2
+Image   Keras                │
+Gen     Layers        ┌──────┴──────┐
+ │         │          ▼             ▼
+ └────┬────┘       Feature       Fine-
+      │          Extraction      Tuning
+      │              │             │
+      └──────────────┴──────┬──────┘
+                            ▼
+                    Model Comparison
+                            │
+                            ▼
+                    🏆 Best Model
+                            │
+                            ▼
+              CNN + ImageDataGenerator
+                            │
+                            ▼
+                         84.61%
+```
+
+---
+
+# 1️⃣ Data Exploration & Preprocessing
+
+The first stage focuses on preparing CIFAR-10 for deep-learning models.
 
 ### Operations Performed
 
-- Loaded CIFAR-10
-- Inspected dataset shapes
-- Checked data types
-- Examined class labels
-- Displayed samples from all 10 classes
-- Visualized pixel distributions
-- Normalized images
-- One-hot encoded labels
-
-### Normalization
-
-Original pixels:
-
 ```text
-0 → 255
+CIFAR-10
+   │
+   ├── Dataset Shape
+   ├── Data Types
+   ├── Unique Labels
+   ├── Sample Visualization
+   ├── Pixel Distribution
+   ├── Normalization
+   └── One-Hot Encoding
 ```
 
-Normalized pixels:
+## 🔢 Normalization
+
+Original image values:
 
 ```text
-0 → 1
+0 ────────────────────────────── 255
 ```
 
-Implemented as:
+After normalization:
+
+```text
+0.0 ──────────────────────────── 1.0
+```
+
+Implemented using:
 
 ```python
 X_train = X_train.astype("float32") / 255.0
 X_test = X_test.astype("float32") / 255.0
 ```
 
-Normalization makes optimization more stable and prevents large input values from dominating gradient calculations.
+Normalization provides a consistent numerical scale for neural-network optimization.
 
 ---
 
-# 🧠 CNN vs ANN for Image Classification
+# 🖼️ CIFAR-10 Samples
 
-Traditional ANNs generally require images to be flattened.
+![CIFAR-10 Samples](plots/cifar10_samples_grid.png)
 
-```text
-32 × 32 × 3
-      │
-      ▼
-    Flatten
-      │
-      ▼
-3072-dimensional vector
-```
-
-Flattening removes explicit spatial relationships between neighboring pixels.
-
-CNNs instead apply small learnable kernels across local regions:
-
-```text
-Image
-  │
-  ▼
-3×3 Kernel
-  │
-  ▼
-Local Feature Detection
-  │
-  ▼
-Feature Map
-```
-
-CNNs therefore provide major advantages for image data:
-
-- Local connectivity
-- Parameter sharing
-- Spatial feature extraction
-- Hierarchical representation learning
-- Better handling of image patterns
+The visualization displays examples from all ten CIFAR-10 classes.
 
 ---
 
-# 2️⃣ Convolution, Padding & Strides
+# 📊 Pixel Distribution
 
-## 🔍 Manual Convolution
+### Before Normalization
 
-A manual convolution experiment was implemented using a **3 × 3 edge-detection kernel**.
+![Before Normalization](plots/pixel_histogram_before_normalization.png)
+
+### After Normalization
+
+![After Normalization](plots/pixel_histogram_after_normalization.png)
+
+---
+
+# 🧠 CNN vs ANN
+
+A traditional fully connected neural network generally requires an image to be flattened.
+
+```text
+          IMAGE
+       32 × 32 × 3
+            │
+            ▼
+         Flatten
+            │
+            ▼
+       3072 Values
+            │
+            ▼
+        Dense Layer
+```
+
+Flattening removes explicit spatial relationships between nearby pixels.
+
+A CNN instead uses local learnable filters:
+
+```text
+           IMAGE
+             │
+             ▼
+        3 × 3 Kernel
+             │
+             ▼
+      Local Convolution
+             │
+             ▼
+        Feature Map
+```
+
+### Why CNNs are suitable for images
+
+- 🔍 Local feature extraction
+- ♻️ Parameter sharing
+- 🗺️ Preservation of spatial information
+- 📉 Fewer parameters than large fully connected networks
+- 🧠 Hierarchical feature learning
+
+---
+
+# 2️⃣ Manual Convolution
+
+A manual convolution operation was implemented using an edge-detection kernel.
 
 ```python
 kernel = np.array([
@@ -288,60 +368,94 @@ kernel = np.array([
 ])
 ```
 
-The kernel slides across the image and computes a local dot product at every valid location.
+The kernel moves across the image and performs a local dot product.
 
-This demonstrates the fundamental operation performed internally by `Conv2D`.
+```text
+Image Patch
+    ×
+3 × 3 Kernel
+    │
+    ▼
+Dot Product
+    │
+    ▼
+One Feature-Map Value
+```
+
+## 🔍 Edge Detection Result
+
+![Manual Convolution](plots/manual_convolution_edge_detection.png)
+
+This demonstrates the fundamental mathematical operation performed by a CNN's `Conv2D` layer.
 
 ---
 
-## 🖼️ Padding
+# 3️⃣ Padding
 
 Two padding strategies were investigated.
 
-### VALID Padding
+## VALID Padding
 
 ```text
-Input  : 32 × 32
-Kernel : 3 × 3
-
-Output : 30 × 30
+Input
+32 × 32
+   │
+   │ 3×3 Kernel
+   ▼
+30 × 30
+Output
 ```
 
-### SAME Padding
+No additional pixels are added around the input.
+
+## SAME Padding
 
 ```text
-Input  : 32 × 32
-Kernel : 3 × 3
-
-Output : 32 × 32
+       Zero Padding
+     ┌──────────────┐
+     │   32 × 32    │
+     │    Image     │
+     └──────────────┘
+            │
+            ▼
+        3×3 Kernel
+            │
+            ▼
+         32 × 32
 ```
 
-`SAME` padding is useful when stacking multiple convolution layers because it prevents spatial dimensions from shrinking too quickly.
+`SAME` padding helps preserve spatial dimensions.
 
 ---
 
-## 👣 Strides
+# 4️⃣ Strides
 
-Stride determines how far a kernel moves after each convolution operation.
+Stride determines how many pixels the filter moves after each convolution.
 
 ```text
 Stride = 1
-32 × 32 → 32 × 32
+32 × 32
+   │
+   ▼
+32 × 32
 
 Stride = 2
-32 × 32 → 16 × 16
+32 × 32
+   │
+   ▼
+16 × 16
 ```
 
-A larger stride can therefore perform spatial downsampling.
+Larger strides reduce spatial dimensions and computational requirements.
 
 ---
 
-# 3️⃣ Feature Map Visualization
+# 5️⃣ Feature Maps
 
-A convolutional layer containing **16 filters** was applied to a CIFAR-10 image.
+A convolution layer containing **16 filters** was used.
 
 ```python
-Conv2D(
+layers.Conv2D(
     16,
     (3, 3),
     activation="relu",
@@ -349,194 +463,222 @@ Conv2D(
 )
 ```
 
+Input:
+
+```text
+(1, 32, 32, 3)
+```
+
 Output:
 
 ```text
-Input  → (1, 32, 32, 3)
-Output → (1, 32, 32, 16)
+(1, 32, 32, 16)
 ```
 
-Each filter creates an individual feature map.
+Each filter generates a different feature map.
 
-Early CNN layers can learn features such as:
-
-```text
-Edges
-  ↓
-Gradients
-  ↓
-Textures
-  ↓
-Shapes
-  ↓
-Higher-Level Patterns
-```
-
-### 🖼️ Feature Maps
+## 🗺️ Feature-Map Visualization
 
 ![Feature Maps](plots/feature_maps.png)
 
----
-
-# 4️⃣ Pooling Operations
-
-Two pooling strategies were studied.
-
-## MaxPooling
-
-MaxPooling keeps the strongest activation from each pooling window.
+Early CNN filters can respond to:
 
 ```text
-32 × 32
-   │
-   ▼
-MaxPooling(2×2)
-   │
-   ▼
-16 × 16
+Edges
+  │
+  ▼
+Lines
+  │
+  ▼
+Textures
+  │
+  ▼
+Shapes
+  │
+  ▼
+Complex Visual Features
 ```
 
-It is useful for preserving prominent features while reducing spatial dimensions.
-
-## AveragePooling
-
-AveragePooling calculates the average activation within each local pooling region.
-
-It produces smoother feature representations compared with MaxPooling.
-
 ---
 
-# 🔄 Flatten Operation
+# 6️⃣ Pooling Operations
 
-After convolution and pooling:
+Pooling reduces the spatial size of feature maps.
+
+## 🔵 Before Pooling
+
+![Before Pooling](plots/feature_maps_before_pooling.png)
+
+## 🔥 MaxPooling
 
 ```text
-16 × 16 × 16
-      │
-      ▼
-    Flatten
-      │
-      ▼
-     4096
+┌─────────┐
+│ 1  8    │
+│ 4  3    │
+└─────────┘
+     │
+     ▼
+     8
 ```
 
-Flatten converts multidimensional feature maps into a one-dimensional vector that can be passed into Dense layers.
+MaxPooling retains the strongest activation.
+
+![MaxPooling](plots/maxpooling_feature_maps.png)
+
+## 🌊 AveragePooling
+
+```text
+┌─────────┐
+│ 1  8    │
+│ 4  3    │
+└─────────┘
+     │
+     ▼
+    4.0
+```
+
+AveragePooling keeps the average activation.
+
+![AveragePooling](plots/averagepooling_feature_maps.png)
 
 ---
 
-# 5️⃣ LeNet-5 Architecture
+# 7️⃣ LeNet-5
 
-A CIFAR-10 adaptation of the historical **LeNet-5 CNN architecture** was implemented.
+The historical **LeNet-5 architecture** was adapted for CIFAR-10.
 
 ```text
-Input (32×32×3)
-       │
-       ▼
-Conv2D — 6 Filters — 5×5 — Tanh
-       │
-       ▼
-AveragePooling2D
-       │
-       ▼
-Conv2D — 16 Filters — 5×5 — Tanh
-       │
-       ▼
-AveragePooling2D
-       │
-       ▼
+Input
+32 × 32 × 3
+      │
+      ▼
+Conv2D
+6 × 5×5
+Tanh
+      │
+      ▼
+AveragePooling
+      │
+      ▼
+Conv2D
+16 × 5×5
+Tanh
+      │
+      ▼
+AveragePooling
+      │
+      ▼
 Flatten
-       │
-       ▼
-Dense — 120 — Tanh
-       │
-       ▼
-Dense — 84 — Tanh
-       │
-       ▼
-Dense — 10 — Softmax
+      │
+      ▼
+Dense 120
+Tanh
+      │
+      ▼
+Dense 84
+Tanh
+      │
+      ▼
+Dense 10
+Softmax
 ```
 
-### Parameter Verification
+## Parameter Calculation
 
 First convolution:
 
 ```text
 (5 × 5 × 3 + 1) × 6
-= 456 parameters
+= 456
 ```
 
 Second convolution:
 
 ```text
 (5 × 5 × 6 + 1) × 16
-= 2,416 parameters
+= 2,416
+```
+
+### Final LeNet-5 Result
+
+```text
+Parameters    : 62,006
+Test Accuracy : 53.45%
+```
+
+---
+
+# 8️⃣ Custom CNN Architecture
+
+A modern CNN architecture was built from scratch.
+
+```text
+Input
+32 × 32 × 3
+      │
+      ▼
+┌────────────────────┐
+│ Conv2D 32 — 3×3    │
+│ ReLU + SAME        │
+└────────────────────┘
+      │
+      ▼
+┌────────────────────┐
+│ Conv2D 32 — 3×3    │
+│ ReLU + SAME        │
+└────────────────────┘
+      │
+      ▼
+ MaxPooling2D
+      │
+      ▼
+┌────────────────────┐
+│ Conv2D 64 — 3×3    │
+│ ReLU + SAME        │
+└────────────────────┘
+      │
+      ▼
+┌────────────────────┐
+│ Conv2D 64 — 3×3    │
+│ ReLU + SAME        │
+└────────────────────┘
+      │
+      ▼
+ MaxPooling2D
+      │
+      ▼
+ Conv2D 128
+      │
+      ▼
+GlobalAveragePooling
+      │
+      ▼
+ Dense 256 + ReLU
+      │
+      ▼
+ Dense 10 + Softmax
+      │
+      ▼
+Prediction
 ```
 
 ### Total Parameters
 
 ```text
-62,006
-```
-
-### Final Test Accuracy
-
-```text
-53.52%
-```
-
----
-
-# 6️⃣ Custom CNN Architecture
-
-A more modern CNN was developed for CIFAR-10.
-
-```text
-Input — 32×32×3
-        │
-        ▼
-Conv2D(32, 3×3, ReLU)
-        │
-        ▼
-Conv2D(32, 3×3, ReLU)
-        │
-        ▼
-MaxPooling2D
-        │
-        ▼
-Conv2D(64, 3×3, ReLU)
-        │
-        ▼
-Conv2D(64, 3×3, ReLU)
-        │
-        ▼
-MaxPooling2D
-        │
-        ▼
-Conv2D(128, 3×3, ReLU)
-        │
-        ▼
-GlobalAveragePooling2D
-        │
-        ▼
-Dense(256, ReLU)
-        │
-        ▼
-Dense(10, Softmax)
-```
-
-### Parameters
-
-```text
 175,018
 ```
 
-Using `GlobalAveragePooling2D` instead of a large Flatten-based classification head helps keep the architecture compact.
+### Test Accuracy Without Augmentation
+
+```text
+80.33%
+```
 
 ---
 
-# 7️⃣ CNN Training
+# 9️⃣ CNN Training
 
-The custom CNN was compiled using:
+The custom CNN was compiled with:
 
 ```python
 model_cnn.compile(
@@ -548,13 +690,15 @@ model_cnn.compile(
 
 Training configuration:
 
-```text
-Maximum Epochs     : 100
-Batch Size         : 64
-Validation Split   : 10%
-Optimizer          : Adam
-Loss               : Categorical Crossentropy
-```
+| Setting | Value |
+|---|---|
+| Maximum Epochs | 100 |
+| Batch Size | 64 |
+| Validation Split | 10% |
+| Optimizer | Adam |
+| Loss | Categorical Crossentropy |
+| Early Stopping | Yes |
+| LR Reduction | Yes |
 
 ---
 
@@ -568,7 +712,7 @@ EarlyStopping(
 )
 ```
 
-EarlyStopping prevents unnecessary training when validation performance stops improving.
+This restores the weights from the best validation-loss epoch.
 
 ---
 
@@ -583,35 +727,36 @@ ReduceLROnPlateau(
 )
 ```
 
-The learning rate is gradually reduced when validation loss reaches a plateau, allowing smaller optimization steps near convergence.
+When validation loss stops improving, the learning rate is reduced.
 
 ---
 
-# 📈 Training Performance
+# 📈 CNN Training Curves
 
-![CNN Training Curves](plots/training_curves.png)
+![Training Curves](plots/training_curves.png)
 
-The training curves help identify:
+Training curves make it easier to analyze:
 
+- Training loss
+- Validation loss
+- Training accuracy
+- Validation accuracy
 - Convergence
-- Overfitting
-- Validation performance
-- Effect of learning-rate reduction
-- Early-stopping behavior
+- Potential overfitting
 
 ---
 
-# 8️⃣ Model Evaluation
+# 🔟 Model Evaluation
 
-The trained CNN was evaluated using the **10,000 unseen CIFAR-10 test images**.
+The trained CNN was evaluated against the unseen CIFAR-10 test set.
 
-Evaluation included:
+The evaluation includes:
 
-- Test loss
 - Test accuracy
+- Test loss
 - Confusion matrix
-- Most-confused class pairs
-- Misclassified-image analysis
+- Confused class pairs
+- Misclassified samples
 
 ---
 
@@ -619,9 +764,7 @@ Evaluation included:
 
 ![Confusion Matrix](plots/confusion_matrix.png)
 
-The confusion matrix provides class-level insight into model performance.
-
-Visually similar categories can be more challenging because CIFAR-10 images contain only **32 × 32 pixels**.
+The confusion matrix helps identify which classes are classified correctly and which classes are commonly confused.
 
 ---
 
@@ -629,24 +772,23 @@ Visually similar categories can be more challenging because CIFAR-10 images cont
 
 ![Misclassified Images](plots/misclassified_images.png)
 
-Misclassified samples are useful for understanding the model's weaknesses.
+Possible reasons for incorrect classifications include:
 
-Common causes include:
-
-- Low image resolution
-- Similar object shapes
-- Similar textures
-- Complex backgrounds
-- Partial objects
-- Ambiguous visual features
+```text
+Low Resolution
+      │
+      ├── Similar Objects
+      ├── Complex Backgrounds
+      ├── Object Orientation
+      ├── Partial Objects
+      └── Limited Visual Details
+```
 
 ---
 
-# 9️⃣ Data Augmentation
+# 1️⃣1️⃣ Data Augmentation
 
-Data augmentation was introduced to reduce overfitting and improve generalization.
-
-The `ImageDataGenerator` configuration used:
+Data augmentation was applied to increase training-data diversity.
 
 ```python
 ImageDataGenerator(
@@ -659,57 +801,75 @@ ImageDataGenerator(
 )
 ```
 
-These transformations create different versions of the original training images without changing their labels.
+## 🎨 Augmentation Operations
+
+```text
+             Original Image
+                   │
+        ┌──────────┼───────────┐
+        │          │           │
+        ▼          ▼           ▼
+    Rotation     Shift        Zoom
+        │          │           │
+        └──────────┼───────────┘
+                   ▼
+            Horizontal Flip
+                   │
+                   ▼
+            Augmented Images
+```
+
+## 🖼️ Augmentation Grid
+
+![Augmentation Grid](plots/augmentation_grid.png)
 
 ---
 
-# 🎨 Augmentation Visualization
+# 🚀 Impact of Data Augmentation
 
-![Data Augmentation](plots/augmentation_grid.png)
-
-The augmentation pipeline includes:
+Without augmentation:
 
 ```text
-Original Image
-      │
-      ├── Rotation
-      ├── Width Shift
-      ├── Height Shift
-      ├── Horizontal Flip
-      └── Zoom
+CNN Scratch
+Test Accuracy = 80.33%
 ```
 
-This effectively increases the diversity of the training data.
+With `ImageDataGenerator`:
+
+```text
+CNN Scratch + Aug
+Test Accuracy = 84.61%
+```
+
+### 📈 Improvement
+
+```text
+84.61% - 80.33%
+        =
+   +4.28 percentage points
+```
+
+<div align="center">
+
+### 🔥 Data Augmentation improved the custom CNN from **80.33% → 84.61%**
+
+![Improvement](https://img.shields.io/badge/Accuracy_Improvement-%2B4.28_percentage_points-success?style=for-the-badge)
+
+</div>
 
 ---
 
-# 🔥 Effect of ImageDataGenerator
+# 📊 Augmentation Comparison
 
-The custom CNN without augmentation achieved:
+![Augmentation Comparison](plots/augmentation_accuracy_comparison.png)
 
-```text
-78.84%
-```
-
-After training the same architecture using `ImageDataGenerator`:
-
-```text
-83.73%
-```
-
-### Improvement
-
-```text
-83.73 - 78.84 = +4.89 percentage points
-```
-
-This was the **highest test accuracy obtained in the project**.
+This experiment demonstrates how augmentation can improve generalization by exposing the CNN to transformed versions of training images.
 
 ---
 
-# 🔟 Modern Keras Augmentation Layers
+# 1️⃣2️⃣ Keras Augmentation Layers
 
-A second augmentation strategy was implemented directly inside the model.
+A second augmentation pipeline was created directly inside the neural network.
 
 ```python
 data_augmentation = keras.Sequential([
@@ -720,223 +880,297 @@ data_augmentation = keras.Sequential([
 ])
 ```
 
-Advantages of model-integrated augmentation include:
+## Visualization
 
-- Runs as part of the TensorFlow pipeline
-- Automatically active during training
-- Automatically inactive during inference
-- Easy model integration
+![Keras Augmentation](plots/keras_augmentation_grid.png)
 
-### Result
+### Final Result
 
 ```text
-Test Accuracy = 76.20%
+Architecture    : Custom CNN
+Augmentation    : Keras Layers
+Test Accuracy   : 79.89%
+Parameters      : 175,018
 ```
 
-In this experiment, the `ImageDataGenerator` approach performed better.
+In this experiment, `ImageDataGenerator` produced better test performance than the Keras augmentation-layer configuration.
 
 ---
 
-# 1️⃣1️⃣ Transfer Learning
+# 1️⃣3️⃣ Transfer Learning
 
-The project next explored **MobileNetV2**, using weights learned from ImageNet.
-
-Transfer learning allows knowledge from a large pre-trained model to be reused for a new classification task.
-
-Two strategies were evaluated:
+The project next explores transfer learning using **MobileNetV2**.
 
 ```text
-MobileNetV2
-    │
-    ├── Feature Extraction
-    │
-    └── Fine-Tuning
+               MobileNetV2
+                    │
+        Pre-trained Knowledge
+                    │
+             ┌──────┴──────┐
+             ▼             ▼
+          Frozen        Unfrozen
+             │             │
+             ▼             ▼
+          Feature         Fine-
+         Extraction       Tuning
 ```
 
 ---
 
 # ⚡ MobileNetV2 Feature Extraction
 
-The MobileNetV2 convolutional base was initially frozen.
+The MobileNetV2 base was initially frozen.
 
 ```python
 base_model.trainable = False
 ```
 
-The classification head consisted of:
+Architecture:
 
 ```text
+Input
+  │
+  ▼
 MobileNetV2
-     │
-     ▼
+(Frozen)
+  │
+  ▼
 GlobalAveragePooling2D
-     │
-     ▼
-Dense(128, ReLU)
-     │
-     ▼
-Dense(10, Softmax)
+  │
+  ▼
+Dense 128 + ReLU
+  │
+  ▼
+Dense 10 + Softmax
 ```
 
 ### Result
 
 ```text
-Test Accuracy = 79.13%
-Parameters    = 2,423,242
+Test Accuracy : 79.41%
+Parameters    : 2,423,242
 ```
 
 ---
 
 # 🔓 MobileNetV2 Fine-Tuning
 
-After feature extraction, the upper MobileNetV2 layers were unfrozen.
+After feature extraction, the top MobileNetV2 layers were made trainable.
 
-```text
-Top 30 MobileNetV2 Layers
-           │
-           ▼
-       Unfrozen
-```
-
-Fine-tuning used a very small learning rate:
+A small learning rate was used:
 
 ```python
 Adam(learning_rate=1e-5)
 ```
 
-This protects the useful pre-trained features from being changed too aggressively.
+This allows the pre-trained features to adapt gradually to CIFAR-10.
 
 ### Result
 
 ```text
-Test Accuracy = 81.24%
-Parameters    = 2,423,242
+Test Accuracy : 80.83%
+Parameters    : 2,423,242
 ```
 
-### Improvement over Feature Extraction
+### Fine-Tuning Improvement
 
 ```text
-81.24 - 79.13 = +2.11 percentage points
+80.83% - 79.41%
+        =
+   +1.42 percentage points
 ```
 
 ---
 
-# 📈 Transfer Learning Curves
+# 📈 Transfer Learning Training Curves
 
-![Transfer Learning Curves](plots/transfer_learning_curves.png)
+![Transfer Learning](plots/transfer_learning_curves.png)
 
-The graph combines:
+The graph shows the transition from:
 
 ```text
 Feature Extraction
-       │
-       ▼
-Fine-Tuning Start
-       │
-       ▼
-Fine-Tuning
+        │
+        ▼
+Fine-Tuning Begins
+        │
+        ▼
+Fine-Tuned Model
 ```
 
-This makes it possible to observe how model performance changes after the pre-trained layers become trainable.
-
 ---
 
-# 1️⃣2️⃣ Residual Connection
+# 1️⃣4️⃣ Residual Connection
 
-A minimal residual block was implemented using the Keras Functional API.
+A basic residual block was also implemented.
 
 ```text
-                         ┌── Conv2D(1×1) ──────────────┐
-                         │                              │
-Input ───────────────────┤                              ├── Add → ReLU
-                         │                              │
-                         └── Conv3×3 → ReLU → Conv3×3 ─┘
+                          ┌───────────────┐
+                          │ Conv2D 1 × 1  │
+                          │   Shortcut    │
+                          └───────┬───────┘
+                                  │
+Input ────────────────────────────┼─────────┐
+  │                                         │
+  ▼                                         │
+Conv2D 3×3                                  │
+  │                                         │
+ ReLU                                       │
+  │                                         │
+  ▼                                         │
+Conv2D 3×3                                  │
+  │                                         │
+  └───────────────────┬─────────────────────┘
+                      ▼
+                     Add
+                      │
+                      ▼
+                    ReLU
+                      │
+                      ▼
+                   Output
 ```
 
-Residual connections allow information and gradients to travel through shortcut paths.
+Residual connections create shortcut paths for information and gradients.
 
-They are especially useful in deep networks because they help reduce optimization problems associated with vanishing gradients.
-
-Residual connections are a central concept behind architectures such as **ResNet**.
+They are particularly useful when training deeper networks.
 
 ---
 
-# 📊 Final Model Comparison
+# 📊 FINAL MODEL COMPARISON
 
-| # | Model | Architecture | Augmentation | Transfer Learning | Test Accuracy | Parameters |
-|---:|---|---|---|---|---:|---:|
-| 1 | LeNet-5 | LeNet-5 | No | No | **53.52%** | 62,006 |
-| 2 | CNN Scratch No Aug | Custom CNN | No | No | **78.84%** | 175,018 |
-| 🥇 3 | **CNN Scratch + Aug** | **Custom CNN** | **ImageDataGenerator** | **No** | **83.73% 🏆** | **175,018** |
-| 4 | CNN + Keras Aug Layers | Custom CNN | Keras Layers | No | **76.20%** | 175,018 |
-| 5 | MobileNetV2 Feature Extraction | MobileNetV2 | No | Feature Extraction | **79.13%** | 2,423,242 |
-| 6 | MobileNetV2 Fine-Tuned | MobileNetV2 | No | Fine-Tuning | **81.24%** | 2,423,242 |
+<div align="center">
+
+## 🏆 Six Deep Learning Approaches Compared
+
+</div>
+
+| Rank | Model | Architecture | Augmentation | Transfer Learning | Test Accuracy | Parameters |
+|:---:|---|---|---|---|---:|---:|
+| 🥇 | **CNN Scratch + Aug** | **Custom CNN** | **ImageDataGenerator** | **No** | **84.61%** 🏆 | **175,018** |
+| 🥈 | **MobileNetV2 Fine-Tuned** | MobileNetV2 | No | Fine-Tuning | **80.83%** | 2,423,242 |
+| 🥉 | **CNN Scratch No Aug** | Custom CNN | No | No | **80.33%** | 175,018 |
+| 4 | CNN + Keras Aug Layers | Custom CNN | Keras Layers | No | **79.89%** | 175,018 |
+| 5 | MobileNetV2 Feature Extraction | MobileNetV2 | No | Feature Extraction | **79.41%** | 2,423,242 |
+| 6 | LeNet-5 | LeNet-5 | No | No | **53.45%** | 62,006 |
 
 ---
 
-# 🏆 Accuracy Ranking
+# 🖼️ Final Results Table
+
+![Final Results](plots/results_table.png)
+
+---
+
+# 🏆 Performance Ranking
 
 ```text
-🥇 CNN Scratch + ImageDataGenerator     83.73% ██████████████████████████████████████████
-🥈 MobileNetV2 Fine-Tuned               81.24% █████████████████████████████████████████
-🥉 MobileNetV2 Feature Extraction       79.13% ████████████████████████████████████████
-   CNN Scratch No Aug                   78.84% ███████████████████████████████████████
-   CNN + Keras Aug Layers               76.20% ██████████████████████████████████████
-   LeNet-5                              53.52% ███████████████████████████
+🥇 CNN Scratch + ImageDataGenerator      84.61%  ██████████████████████████████████████████
+
+🥈 MobileNetV2 Fine-Tuned                80.83%  ████████████████████████████████████████
+
+🥉 CNN Scratch No Aug                    80.33%  ████████████████████████████████████████
+
+④  CNN + Keras Aug Layers               79.89%  ███████████████████████████████████████
+
+⑤  MobileNetV2 Feature Extraction       79.41%  ███████████████████████████████████████
+
+⑥  LeNet-5                              53.45%  ██████████████████████████
 ```
 
 ---
 
 # 🔬 Key Experimental Findings
 
-### 🥇 Best Overall Accuracy
-
-**CNN Scratch + ImageDataGenerator — 83.73%**
-
-This model achieved the highest test accuracy in the experiment.
-
-### 📈 Benefit of Data Augmentation
+## 🥇 Best Model
 
 ```text
-Without Augmentation : 78.84%
-With ImageDataGen    : 83.73%
-Improvement          : +4.89 percentage points
+CNN Scratch + ImageDataGenerator
 ```
 
-### ⚡ Benefit of Fine-Tuning
+achieved:
+
+# **84.61%**
+
+test accuracy.
+
+---
+
+## 🎨 Data Augmentation Helped
 
 ```text
-Feature Extraction : 79.13%
-Fine-Tuning        : 81.24%
-Improvement        : +2.11 percentage points
+CNN Scratch No Aug     : 80.33%
+CNN Scratch + Aug      : 84.61%
+--------------------------------
+Improvement            : +4.28 percentage points
 ```
 
-### 🪶 Most Parameter-Efficient Model
+This is one of the most important findings of the project.
+
+---
+
+## 🔓 Fine-Tuning Helped MobileNetV2
 
 ```text
-LeNet-5
-Parameters: 62,006
-Accuracy:   53.52%
+Feature Extraction : 79.41%
+Fine-Tuned         : 80.83%
+----------------------------
+Improvement        : +1.42 percentage points
 ```
 
-It is the smallest evaluated network, although its accuracy was substantially lower.
+Fine-tuning improved the transfer-learning model.
 
-### 💡 Strong Accuracy-to-Size Result
+---
 
-The augmented custom CNN achieved:
+## ⚡ Custom CNN vs MobileNetV2
 
 ```text
-Accuracy   : 83.73%
+Custom CNN + Aug
+Accuracy   : 84.61%
 Parameters : 175,018
-```
 
-while the MobileNetV2 models contained:
+              VS
 
-```text
+MobileNetV2 Fine-Tuned
+Accuracy   : 80.83%
 Parameters : 2,423,242
 ```
 
-In this experiment, the much smaller augmented custom CNN produced the highest test accuracy.
+The custom augmented CNN achieved **3.78 percentage points higher test accuracy** in this experiment while using far fewer parameters.
+
+---
+
+# 📐 Parameter Comparison
+
+| Model | Parameters | Test Accuracy |
+|---|---:|---:|
+| LeNet-5 | 62,006 | 53.45% |
+| Custom CNN | 175,018 | 80.33% |
+| Custom CNN + ImageDataGenerator | 175,018 | **84.61% 🏆** |
+| Custom CNN + Keras Aug | 175,018 | 79.89% |
+| MobileNetV2 Feature Extraction | 2,423,242 | 79.41% |
+| MobileNetV2 Fine-Tuned | 2,423,242 | 80.83% |
+
+---
+
+# 💡 Accuracy vs Model Size
+
+The experiment produced an interesting result:
+
+```text
+Custom CNN + Aug
+│
+├── Parameters → 175,018
+└── Accuracy   → 84.61% 🏆
+
+
+MobileNetV2 Fine-Tuned
+│
+├── Parameters → 2,423,242
+└── Accuracy   → 80.83%
+```
+
+For this particular experiment, the smaller custom CNN combined with data augmentation achieved the strongest final test performance.
 
 ---
 
@@ -945,16 +1179,17 @@ In this experiment, the much smaller augmented custom CNN produced the highest t
 <div align="center">
 
 | Technology | Purpose |
-|---|---|
-| 🐍 Python | Programming |
-| 🧠 TensorFlow | Deep Learning |
-| 🔥 Keras | CNN Model Development |
-| 🔢 NumPy | Numerical Operations |
-| 📊 Pandas | Results & Comparison |
-| 📈 Matplotlib | Visualization |
-| 🧮 SciPy | Manual Convolution |
-| 🤖 Scikit-learn | Confusion Matrix |
-| 📓 Jupyter Notebook | Development Environment |
+|:---:|---|
+| 🐍 **Python** | Main Programming Language |
+| 🧠 **TensorFlow** | Deep Learning Framework |
+| 🔥 **Keras** | CNN Development |
+| 🔢 **NumPy** | Numerical Computation |
+| 📊 **Pandas** | Results & Tables |
+| 📈 **Matplotlib** | Data Visualization |
+| 🧮 **SciPy** | Manual Convolution |
+| 🤖 **Scikit-learn** | Evaluation |
+| 📓 **Jupyter Notebook** | Development Environment |
+| 🐙 **GitHub** | Project Repository |
 
 </div>
 
@@ -962,47 +1197,47 @@ In this experiment, the much smaller augmented custom CNN produced the highest t
 
 # 📦 Installation
 
-Clone the repository:
+## 1. Clone Repository
 
 ```bash
 git clone YOUR_REPOSITORY_URL
 ```
 
-Move into the project directory:
+## 2. Enter Project Folder
 
 ```bash
 cd DL_PR4A_CIFAR10
 ```
 
-Install dependencies:
+## 3. Install Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Start Jupyter Notebook:
+## 4. Start Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
-Open:
+## 5. Open
 
 ```text
 DL_PR4A.ipynb
 ```
 
-Then select:
+Then run:
 
 ```text
-Kernel → Restart Kernel and Run All Cells
+Kernel
+   ↓
+Restart Kernel and Run All Cells
 ```
 
 ---
 
 # 📋 requirements.txt
-
-A typical environment for this project requires:
 
 ```text
 tensorflow
@@ -1019,23 +1254,26 @@ jupyter
 # ▶️ How to Run
 
 ```bash
-# 1. Clone repository
+# Clone repository
 git clone YOUR_REPOSITORY_URL
 
-# 2. Open project
+# Enter project
 cd DL_PR4A_CIFAR10
 
-# 3. Install dependencies
+# Install dependencies
 pip install -r requirements.txt
 
-# 4. Start Jupyter
+# Start Jupyter
 jupyter notebook
+```
 
-# 5. Open
+Then open:
+
+```text
 DL_PR4A.ipynb
 ```
 
-The CIFAR-10 dataset is loaded automatically through TensorFlow/Keras, so no separate dataset download is required.
+The CIFAR-10 dataset is automatically downloaded through TensorFlow/Keras.
 
 ---
 
@@ -1043,66 +1281,83 @@ The CIFAR-10 dataset is loaded automatically through TensorFlow/Keras, so no sep
 
 <div align="center">
 
-### ▶️ Watch Complete Project Explanation
+## 🎬 Watch Complete Project Demonstration
 
-[![Project Demo](https://img.shields.io/badge/▶_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUR_VIDEO_LINK)
+[![Watch Demo](https://img.shields.io/badge/▶_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUR_VIDEO_LINK)
+
+<br>
+
+**CNN • CIFAR-10 • Augmentation • MobileNetV2 • Fine-Tuning**
 
 </div>
 
-> Replace `YOUR_VIDEO_LINK` with your Google Drive, YouTube, or other project-demo video link.
+> 🔗 Replace `YOUR_VIDEO_LINK` with your actual project demonstration video URL.
 
 ---
 
 # 📸 Project Visualizations
 
-The repository contains important visual outputs generated during the experiment.
-
-| Visualization | Purpose |
+| Visualization | Description |
 |---|---|
-| 🗺️ Feature Maps | Understand convolution filters |
-| 🎨 Augmentation Grid | View transformed training samples |
-| 📈 Training Curves | Analyze training and validation performance |
-| 🧩 Confusion Matrix | Analyze class-level predictions |
-| ❌ Misclassified Images | Understand model errors |
-| ⚡ Transfer Learning Curves | Compare feature extraction and fine-tuning |
-| 📊 Results Table | Compare all models |
+| 🖼️ CIFAR-10 Grid | Samples from all classes |
+| 📊 Pixel Histograms | Before & after normalization |
+| 🔍 Manual Convolution | Edge detection |
+| 🗺️ Feature Maps | Learned convolution features |
+| 🔥 MaxPooling | Max-pooled feature maps |
+| 🌊 AveragePooling | Average-pooled feature maps |
+| 📈 Training Curves | CNN learning behavior |
+| 🧩 Confusion Matrix | Class-level evaluation |
+| ❌ Misclassified Images | Error analysis |
+| 🎨 Augmentation Grid | ImageDataGenerator transformations |
+| 🧩 Keras Augmentation | Modern augmentation layers |
+| ⚡ Transfer Curves | Feature extraction + fine-tuning |
+| 🏆 Results Table | Six-model comparison |
 
 ---
 
 # 🧠 Concepts Covered
 
 ```text
-Deep Learning
+DEEP LEARNING
 │
-├── Artificial Neural Networks
+├── 📊 Data Preprocessing
+│   ├── Normalization
+│   └── One-Hot Encoding
 │
-├── Convolutional Neural Networks
+├── 🧠 CNN Fundamentals
 │   ├── Convolution
 │   ├── Kernels
-│   ├── Feature Maps
 │   ├── Padding
 │   ├── Strides
-│   └── Pooling
+│   └── Feature Maps
 │
-├── CNN Architectures
+├── 📉 Pooling
+│   ├── MaxPooling
+│   ├── AveragePooling
+│   └── GlobalAveragePooling
+│
+├── 🏛️ CNN Architectures
 │   ├── LeNet-5
-│   ├── Custom CNN
-│   ├── MobileNetV2
-│   └── Residual Connections
+│   └── Custom CNN
 │
-├── Training
+├── 🔄 Training
 │   ├── Backpropagation
 │   ├── Adam
 │   ├── Categorical Crossentropy
 │   ├── EarlyStopping
 │   └── ReduceLROnPlateau
 │
-├── Regularization
-│   └── Data Augmentation
+├── 🎨 Data Augmentation
+│   ├── ImageDataGenerator
+│   └── Keras Augmentation Layers
 │
-└── Transfer Learning
-    ├── Feature Extraction
-    └── Fine-Tuning
+├── ⚡ Transfer Learning
+│   └── MobileNetV2
+│       ├── Feature Extraction
+│       └── Fine-Tuning
+│
+└── 🔗 Modern CNN Concepts
+    └── Residual Connections
 ```
 
 ---
@@ -1112,89 +1367,124 @@ Deep Learning
 <div align="center">
 
 | 🚀 Highlight | 📊 Result |
-|---|---|
+|:---|:---:|
 | Dataset | CIFAR-10 |
+| Total Images | 60,000 |
 | Classes | 10 |
 | Models Compared | 6 |
-| Best Model | CNN Scratch + Aug |
-| Best Accuracy | **83.73%** |
-| Best CNN Parameters | **175,018** |
+| Best Architecture | Custom CNN |
+| Best Augmentation | ImageDataGenerator |
+| 🏆 Best Accuracy | **84.61%** |
+| Best Model Parameters | **175,018** |
 | Transfer Model | MobileNetV2 |
-| Fine-Tuned Accuracy | **81.24%** |
+| Fine-Tuned Accuracy | **80.83%** |
 | Framework | TensorFlow / Keras |
 
 </div>
 
 ---
 
+# 📚 What I Learned
+
+Through this project, I gained practical experience in:
+
+- ✅ Loading and exploring image datasets
+- ✅ Image normalization
+- ✅ One-hot encoding
+- ✅ Manual convolution
+- ✅ CNN filters and kernels
+- ✅ Padding and strides
+- ✅ Feature-map visualization
+- ✅ MaxPooling and AveragePooling
+- ✅ Building LeNet-5
+- ✅ Building CNNs from scratch
+- ✅ CNN backpropagation concepts
+- ✅ Training with callbacks
+- ✅ Early stopping
+- ✅ Learning-rate reduction
+- ✅ Confusion-matrix analysis
+- ✅ Misclassification analysis
+- ✅ Image augmentation
+- ✅ Keras augmentation layers
+- ✅ Transfer learning
+- ✅ Feature extraction
+- ✅ Fine-tuning
+- ✅ MobileNetV2
+- ✅ Residual connections
+- ✅ Comparing deep-learning models
+
+---
+
 # 🔮 Future Improvements
 
-Potential extensions of this project include:
+The project can be extended using:
 
-- Batch Normalization
-- Dropout regularization
-- Deeper residual networks
-- Learning-rate scheduling
-- More advanced augmentation
-- Hyperparameter optimization
-- EfficientNet transfer learning
-- ResNet transfer learning
-- Model ensembling
-- Grad-CAM visualization
-- Web-based inference application
+```text
+Current Project
+      │
+      ├── Batch Normalization
+      │
+      ├── Dropout
+      │
+      ├── Advanced Augmentation
+      │
+      ├── Hyperparameter Tuning
+      │
+      ├── Learning Rate Scheduling
+      │
+      ├── ResNet
+      │
+      ├── EfficientNet
+      │
+      ├── Grad-CAM
+      │
+      ├── Model Ensemble
+      │
+      └── Web Deployment
+```
 
----
-
-# 🎓 Learning Outcomes
-
-After completing this project, the following concepts were implemented practically:
-
-- Loading and preprocessing image datasets
-- Understanding convolution mathematically
-- Applying padding and strides
-- Visualizing CNN feature maps
-- Understanding pooling operations
-- Building LeNet-5
-- Designing a CNN from scratch
-- Understanding CNN backpropagation
-- Training with callbacks
-- Evaluating image classifiers
-- Analyzing confusion matrices
-- Applying data augmentation
-- Using modern Keras augmentation layers
-- Implementing transfer learning
-- Performing fine-tuning
-- Comparing deep-learning models
-- Creating residual connections with the Functional API
+Possible future work includes experimenting with deeper architectures and more advanced regularization while maintaining good generalization.
 
 ---
 
-# 📌 Conclusion
+# 📌 Final Conclusion
 
-This project demonstrates a complete progression through **Convolutional Neural Networks for image classification**.
+This project demonstrates the complete development of a **CIFAR-10 image-classification system**, beginning with fundamental convolution concepts and progressing toward modern deep-learning techniques.
 
-The experiment started with CNN fundamentals such as convolution, padding,
-strides, pooling and feature maps. It then progressed through LeNet-5 and a
-custom CNN architecture before exploring data augmentation and MobileNetV2
-transfer learning.
+Six different approaches were evaluated:
 
-Among the six evaluated approaches, the best result was:
+```text
+1. LeNet-5
+2. CNN Scratch No Augmentation
+3. CNN Scratch + ImageDataGenerator
+4. CNN + Keras Augmentation Layers
+5. MobileNetV2 Feature Extraction
+6. MobileNetV2 Fine-Tuning
+```
+
+The final experiment showed that the best-performing approach was:
 
 <div align="center">
 
-# 🏆 83.73%
+# 🥇 CNN Scratch + ImageDataGenerator
 
-### CNN Scratch + ImageDataGenerator
+# 🏆 84.61%
 
-**175,018 Parameters**
+### Test Accuracy
+
+![Best](https://img.shields.io/badge/BEST_MODEL-CNN_Scratch_%2B_Aug-success?style=for-the-badge)
+
+![Accuracy](https://img.shields.io/badge/TEST_ACCURACY-84.61%25-brightgreen?style=for-the-badge)
+
+![Parameters](https://img.shields.io/badge/PARAMETERS-175%2C018-blue?style=for-the-badge)
 
 </div>
 
-The custom augmented CNN improved from **78.84% to 83.73%**, a gain of **4.89 percentage points** over the same architecture without augmentation.
+Data augmentation improved the custom CNN from **80.33% to 84.61%**, representing an improvement of **4.28 percentage points**.
 
-MobileNetV2 also benefited from fine-tuning, improving from **79.13% to 81.24%**.
+Fine-tuning also improved MobileNetV2 from **79.41% to 80.83%**, an improvement of **1.42 percentage points**.
 
-These results demonstrate that model performance depends not only on model size but also on the architecture, training strategy, augmentation, and adaptation of learned features.
+The experiment demonstrates that a larger pre-trained model does not automatically guarantee the highest test accuracy for every dataset and training setup. In this project, the relatively compact custom CNN combined with `ImageDataGenerator` achieved the strongest final result.
 
 ---
 
@@ -1202,24 +1492,28 @@ These results demonstrate that model performance depends not only on model size 
 
 # 👨‍💻 Author
 
-### Tushar Vala
+## Tushar Vala
 
-**Data Analyst | AI/ML Developer**
-
-<br>
-
-### ⭐ If you found this project useful, consider giving the repository a star!
+### Data Analyst | AI/ML Developer
 
 <br>
 
-![Made with Python](https://img.shields.io/badge/Made%20with-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Powered by TensorFlow](https://img.shields.io/badge/Powered%20by-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Built with Keras](https://img.shields.io/badge/Built%20with-Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
+![Python](https://img.shields.io/badge/Made_with-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/Powered_by-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Built_with-Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
+
+<br>
 
 ---
 
-### 🧠 From Convolution Fundamentals to Transfer Learning
+### ⭐ If you found this project useful, consider giving the repository a star!
 
-**CIFAR-10 • CNN • Data Augmentation • MobileNetV2 • Fine-Tuning**
+### 🚀 From CNN Fundamentals to Transfer Learning
+
+**CIFAR-10 • CNN • Data Augmentation • MobileNetV2 • Fine-Tuning • Residual Connections**
+
+<br>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=00C853&center=true&vCenter=true&width=750&lines=Project+Completed+Successfully+%E2%9C%85;Best+Test+Accuracy%3A+84.61%25+%F0%9F%8F%86;Thank+You+For+Visiting+My+Project+%F0%9F%9A%80" alt="Footer Animation" />
 
 </div>
