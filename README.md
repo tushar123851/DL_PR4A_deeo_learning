@@ -984,7 +984,6 @@ Parameters    : 2,423,242
 
 # 📈 Transfer Learning Training Curves
 
-![Transfer Learning](plots/transfer_learning_curves.png)
 
 The graph shows the transition from:
 
@@ -1058,7 +1057,6 @@ They are particularly useful when training deeper networks.
 
 # 🖼️ Final Results Table
 
-![Final Results](plots/results_table.png)
 
 ---
 
