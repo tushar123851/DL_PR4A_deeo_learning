@@ -60,7 +60,7 @@ The final goal is to understand how different CNN architectures and training str
 
 ## 🎬 Watch Complete Project Demonstration
 
-[![Watch Demo](https://img.shields.io/badge/▶_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUR_VIDEO_LINK)
+[![Watch Demo](https://img.shields.io/badge/▶_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white)]([YOUR_VIDEO_LINK](https://drive.google.com/file/d/1h4CbE2HpPLwSjAtS3oyaEeEOeQu_dqSE/view?usp=sharing))
 
 <br>
 
