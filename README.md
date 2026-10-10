@@ -60,7 +60,7 @@ The final goal is to understand how different CNN architectures and training str
 
 ### ▶️ Watch the Complete CIFAR-10 Project Demo
 
-<a href="https://drive.google.com/file/d/1h4CbE2HpPLwSjAtS3oyaEeEOeQu_dqSE/view?usp=sharing">
+<a href="https://drive.google.com/file/d/1mEhsnZ1Hbqj6yKJQyFsF_7Yh-j7G89wF/view?usp=sharing">
   <img src="https://img.shields.io/badge/▶%20WATCH%20PROJECT%20DEMO-Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Watch Project Demo">
 </a>
 
