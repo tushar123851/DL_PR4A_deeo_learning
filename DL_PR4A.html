@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DL PR4 — Project A | CIFAR-10 Image Classification</title>
+<style>
+:root{--bg:#07111f;--card:#0f1c2e;--card2:#14243a;--text:#eaf2ff;--muted:#a9bad2;--accent:#43b7ff;--green:#39d98a;--border:#253b58}
+*{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,#07111f,#0d2038);color:var(--text);line-height:1.65}
+.container{max-width:1100px;margin:auto;padding:28px}.hero{text-align:center;padding:60px 20px}.hero h1{font-size:clamp(2rem,5vw,4rem);margin:0}.hero h2{color:var(--accent);font-weight:500}
+.badge{display:inline-block;margin:5px;padding:7px 12px;border:1px solid var(--border);border-radius:999px;background:var(--card)}
+.best{margin:25px auto;max-width:700px;padding:25px;border:1px solid var(--green);border-radius:18px;background:rgba(57,217,138,.08)}
+.best strong{font-size:2.2rem;color:var(--green)}
+section{background:rgba(15,28,46,.92);border:1px solid var(--border);border-radius:18px;padding:28px;margin:24px 0}
+h2{color:var(--accent)} h3{color:#cdeaff} table{width:100%;border-collapse:collapse;overflow:hidden}
+th,td{padding:12px;border-bottom:1px solid var(--border);text-align:left} th{background:var(--card2)}
+tr.bestrow{background:rgba(57,217,138,.1);font-weight:700}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.metric{background:var(--card2);padding:20px;border-radius:14px;text-align:center}.metric b{display:block;font-size:1.6rem;color:var(--green)}
+img{max-width:100%;border-radius:12px;border:1px solid var(--border);margin:12px 0}
+code,pre{background:#06101c;border:1px solid var(--border);border-radius:10px} pre{padding:16px;overflow:auto}
+footer{text-align:center;color:var(--muted);padding:35px}.pulse{animation:pulse 2s infinite}@keyframes pulse{50%{transform:scale(1.035)}}
+@media(max-width:700px){.container{padding:14px}section{padding:18px}table{font-size:.8rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>🧠 CIFAR-10 Image Classification</h1>
+<h2>Deep Learning PR4 — Project A</h2>
+<p>CNN from Scratch • Data Augmentation • MobileNetV2 • Fine-Tuning • Residual Connections</p>
+<div><span class="badge">Python</span><span class="badge">TensorFlow</span><span class="badge">Keras</span><span class="badge">CIFAR-10</span></div>
+<div class="best pulse"><div>🏆 Best Model</div><h2>CNN Scratch + ImageDataGenerator</h2><strong>84.61%</strong><div>Test Accuracy • 175,018 Parameters</div></div>
+</header>
+
+<section><h2>📌 Project Overview</h2>
+<p>This project develops a complete CIFAR-10 image-classification workflow, progressing from convolution fundamentals to a custom CNN, augmentation, MobileNetV2 transfer learning, fine-tuning, and residual connections.</p>
+<div class="grid"><div class="metric"><b>60,000</b>Total Images</div><div class="metric"><b>10</b>Classes</div><div class="metric"><b>6</b>Models Compared</div><div class="metric"><b>84.61%</b>Best Accuracy</div></div>
+</section>
+
+<section><h2>🗃️ CIFAR-10 Dataset</h2>
+<p>50,000 training images and 10,000 test images, each 32×32 RGB, across airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck classes.</p>
+<pre><code>from tensorflow.keras.datasets import cifar10
+(X_train, y_train), (X_test, y_test) = cifar10.load_data()
+
+X_train = X_train.astype("float32") / 255.0
+X_test  = X_test.astype("float32") / 255.0</code></pre>
+</section>
+
+<section><h2>🧪 Project Topics</h2>
+<div class="grid">
+<div class="metric">🔍<b>Convolution</b>Manual filters, padding & strides</div>
+<div class="metric">🗺️<b>Feature Maps</b>CNN filter visualization</div>
+<div class="metric">📉<b>Pooling</b>Max & Average pooling</div>
+<div class="metric">🧠<b>CNNs</b>LeNet-5 & custom CNN</div>
+<div class="metric">🎨<b>Augmentation</b>ImageDataGenerator & Keras layers</div>
+<div class="metric">⚡<b>Transfer Learning</b>MobileNetV2 & fine-tuning</div>
+</div>
+</section>
+
+<section><h2>📊 Final Model Comparison</h2>
+<table>
+<thead><tr><th>Model</th><th>Architecture</th><th>Augmentation</th><th>Transfer Learning</th><th>Test Accuracy</th><th>Parameters</th></tr></thead>
+<tbody>
+<tr><td>LeNet-5</td><td>LeNet-5</td><td>No</td><td>No</td><td>53.45%</td><td>62,006</td></tr>
+<tr><td>CNN Scratch No Aug</td><td>Custom CNN</td><td>No</td><td>No</td><td>80.33%</td><td>175,018</td></tr>
+<tr class="bestrow"><td>🏆 CNN Scratch + Aug</td><td>Custom CNN</td><td>ImageDataGenerator</td><td>No</td><td>84.61%</td><td>175,018</td></tr>
+<tr><td>CNN + Keras Aug Layers</td><td>Custom CNN</td><td>Keras Layers</td><td>No</td><td>79.89%</td><td>175,018</td></tr>
+<tr><td>MobileNetV2 Feature Extraction</td><td>MobileNetV2</td><td>No</td><td>Feature Extraction</td><td>79.41%</td><td>2,423,242</td></tr>
+<tr><td>MobileNetV2 Fine-Tuned</td><td>MobileNetV2</td><td>No</td><td>Fine-Tuning</td><td>80.83%</td><td>2,423,242</td></tr>
+</tbody></table>
+</section>
+
+<section><h2>📈 Key Findings</h2>
+<ul>
+<li>ImageDataGenerator improved the custom CNN from <b>80.33%</b> to <b>84.61%</b>: <b>+4.28 percentage points</b>.</li>
+<li>MobileNetV2 fine-tuning improved accuracy from <b>79.41%</b> to <b>80.83%</b>: <b>+1.42 percentage points</b>.</li>
+<li>The augmented custom CNN achieved the highest accuracy while using substantially fewer parameters than MobileNetV2.</li>
+</ul>
+</section>
+
+<section><h2>🖼️ Saved Project Plots</h2>
+<p>If this HTML is kept beside the <code>plots/</code> folder, the following project outputs will display automatically when those files exist.</p>
+<h3>Training Curves</h3><img src="plots/training_curves.png" alt="Training Curves">
+<h3>Confusion Matrix</h3><img src="plots/confusion_matrix.png" alt="Confusion Matrix">
+<h3>Data Augmentation</h3><img src="plots/augmentation_grid.png" alt="Augmentation Grid">
+<h3>Feature Maps</h3><img src="plots/feature_maps.png" alt="Feature Maps">
+<h3>Transfer Learning</h3><img src="plots/transfer_learning_curves.png" alt="Transfer Learning Curves">
+<h3>Final Results</h3><img src="plots/results_table.png" alt="Results Table">
+</section>
+
+<section><h2>🛠️ Technologies</h2><p>Python • TensorFlow • Keras • NumPy • Pandas • Matplotlib • SciPy • Scikit-learn • Jupyter Notebook</p></section>
+
+<section><h2>📌 Conclusion</h2>
+<p>Among the six evaluated approaches, <b>CNN Scratch + ImageDataGenerator</b> performed best with <b>84.61% test accuracy</b>. The experiment demonstrates the practical value of augmentation and shows that a compact custom CNN can outperform a substantially larger transfer-learning model for this particular training setup.</p>
+</section>
+
+<footer><h3>👨‍💻 Tushar Vala</h3><p>Data Analyst | AI/ML Developer</p><p>Deep Learning PR4 • Project A • CIFAR-10</p></footer>
+</div>
+</body>
+</html>
