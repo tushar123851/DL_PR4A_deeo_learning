@@ -54,20 +54,21 @@ The final goal is to understand how different CNN architectures and training str
 
 ---
 
-# 🎥 Project Demo Video
+## 🎥 Project Demo Video
 
 <div align="center">
 
-## 🎬 Watch Complete Project Demonstration
+### ▶️ Watch the Complete CIFAR-10 Project Demo
 
-[![Watch Demo](https://img.shields.io/badge/▶_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white)]([YOUR_VIDEO_LINK](https://drive.google.com/file/d/1h4CbE2HpPLwSjAtS3oyaEeEOeQu_dqSE/view?usp=sharing))
+<a href="https://drive.google.com/file/d/1h4CbE2HpPLwSjAtS3oyaEeEOeQu_dqSE/view?usp=sharing">
+  <img src="https://img.shields.io/badge/▶%20WATCH%20PROJECT%20DEMO-Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Watch Project Demo">
+</a>
 
-<br>
+<br><br>
 
-**CNN • CIFAR-10 • Augmentation • MobileNetV2 • Fine-Tuning**
+**CNN from Scratch • Data Augmentation • MobileNetV2 • Fine-Tuning**
 
 </div>
-
 
 ---
 
